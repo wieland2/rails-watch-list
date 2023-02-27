@@ -1,0 +1,9 @@
+<div class="container">
+  <%= simple_form_for ([@list, @bookmark]) do |f| %>
+  <%= f.input :comment %>
+  <%= f.association :movie %>
+  <%= f.submit "Create List", class: "btn btn-primary" %>
+  <% end %>
+</div>
+
+<p><%= link_to "Back to List", list_path(@list) %></p>

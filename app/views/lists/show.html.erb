@@ -1,0 +1,10 @@
+<%= @list.name %>
+
+<p><%= link_to "Add a Movie", new_list_bookmark_path(@list) %></p>
+
+<% @list.bookmarks.each do |item| %>
+<p><%= item.movie.title%></p>
+<p><%= item.comment%></p>
+<% end %>
+
+<p><%= link_to "Return to List", lists_path %></p>
